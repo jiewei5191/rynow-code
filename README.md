@@ -57,3 +57,24 @@ admin. Batch changes into one draft per round.
   (e.g. A2 RM271 vs RM339, SR20R RM295 vs RM369, AD200Pro II RM1,119).
 - Brand logos: Amaran `logo-amaran-clean-v2.png`, Godox `logo-godox.png`
   (Shopify CDN, see `build_quiz.py`).
+
+### `product-page/` — product page two-column rebuild (v1, 2026-11-14)
+
+Rebuilds the product page from the old stacked single-column layout to a
+two-column desktop layout (gallery left, details right, buy box in the first
+viewport). Lives in the UNPUBLISHED draft theme `190044602435`
+("RYNOW - Product page two-column").
+
+- `product-information.liquid` — the `product-information` section with the
+  `/* RYNOW stacked product layout (desktop) */` CSS block REMOVED (that block
+  forced `grid-template-columns: 1fr` on desktop, the cause of the stacked
+  layout). Everything else byte-identical to MAIN.
+- `product.json` — product template: section `gap` 0 → 40,
+  `details_position` flex-end → flex-start, `sticky_details_desktop`
+  false → true.
+- `BUILD-NOTES.md` — build notes (draft id, verification, sticky-bar finding).
+
+Verified 2026-11-14: two-column confirmed on AD600Pro II + A2 at 1920px,
+title/price/Add to cart visible in the first viewport. Known gaps:
+`sticky_details_desktop` did not take effect (details scroll away, gallery
+pins instead); mobile ~390px not yet verified (owner to check on phone).

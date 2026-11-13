@@ -1,0 +1,438 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product-information",
+      "blocks": {
+        "judge_me_reviews_preview_badge_dVpGUr": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {}
+        },
+        "media-gallery": {
+          "type": "_product-media-gallery",
+          "static": true,
+          "settings": {
+            "media_presentation": "carousel",
+            "media_columns": "one",
+            "image_gap": 4,
+            "large_first_image": false,
+            "icons_style": "arrows_large",
+            "slideshow_controls_style": "thumbnails",
+            "slideshow_mobile_controls_style": "thumbnails",
+            "thumbnail_position": "bottom",
+            "thumbnail_width": 72,
+            "thumbnail_radius": 12,
+            "aspect_ratio": "adapt",
+            "constrain_to_viewport": true,
+            "media_fit": "contain",
+            "media_radius": 20,
+            "extend_media": false,
+            "zoom": false,
+            "video_loop": false,
+            "hide_variants": false,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "product-details": {
+          "type": "_product-details",
+          "static": true,
+          "settings": {
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fill",
+            "details_position": "flex-start",
+            "gap": 28,
+            "sticky_details_desktop": true,
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 24,
+            "padding-block-end": 24,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_icgrde": {
+              "type": "group",
+              "name": "Header",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "text_xrnftG": {
+                  "type": "text",
+                  "name": "Product title",
+                  "settings": {
+                    "text": "<h1>{{ closest.product.title }}</h1>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h4",
+                    "font": "var(--font-primary--family)",
+                    "font_size": "",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "price_tVjtKg": {
+                  "type": "price",
+                  "settings": {
+                    "show_sale_price_first": true,
+                    "show_installments": false,
+                    "show_tax_info": false,
+                    "type_preset": "paragraph",
+                    "width": "100%",
+                    "alignment": "left",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "padding-block-start": 4,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_xrnftG",
+                "price_tVjtKg"
+              ]
+            },
+            "divider_VJhene": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "width_percent": 100,
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {}
+            },
+            "variant_picker_R3rGDr": {
+              "type": "variant-picker",
+              "settings": {
+                "variant_style": "buttons",
+                "show_swatches": false,
+                "alignment": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "buy_buttons_eYQEYi": {
+              "type": "buy-buttons",
+              "settings": {
+                "stacking": true,
+                "show_pickup_availability": false,
+                "gift_card_form": true,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "quantity": {
+                  "type": "quantity",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                },
+                "add-to-cart": {
+                  "type": "add-to-cart",
+                  "static": true,
+                  "settings": {
+                    "style_class": "button"
+                  },
+                  "blocks": {}
+                },
+                "accelerated-checkout": {
+                  "type": "accelerated-checkout",
+                  "static": true,
+                  "settings": {},
+                  "blocks": {}
+                }
+              },
+              "block_order": []
+            },
+            "custom_liquid_gmXptY": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<div style=\"margin-top: 12px; color: rgba(0,0,0,.62); font-size: 12px; line-height: 1.7; letter-spacing: .01em;\"><div>🚚 <strong style=\"font-weight: 500; color: rgba(0,0,0,.78);\">West Malaysia:</strong> from RM10 · 2–4 business days <span style=\"color: rgba(0,0,0,.5);\">(Free shipping for orders over RM300)</span></div><div>🚚 <strong style=\"font-weight: 500; color: rgba(0,0,0,.78);\">East Malaysia:</strong> from RM15.90 · 3–5 business days</div><div>🌏 <strong style=\"font-weight: 500; color: rgba(0,0,0,.78);\">International:</strong> Shipping rates calculated at checkout</div></div>"
+              },
+              "blocks": {}
+            },
+            "product_description_G9VNaY": {
+              "type": "product-description",
+              "name": "t:names.product_description",
+              "settings": {
+                "text": "{{ closest.product.description }}",
+                "width": "100%",
+                "max_width": "none",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "group_icgrde",
+            "divider_VJhene",
+            "variant_picker_R3rGDr",
+            "buy_buttons_eYQEYi",
+            "custom_liquid_gmXptY",
+            "product_description_G9VNaY"
+          ]
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_dVpGUr"
+      ],
+      "settings": {
+        "content_width": "content-center-aligned",
+        "desktop_media_position": "left",
+        "equal_columns": false,
+        "limit_details_width": false,
+        "gap": 40,
+        "enable_sticky_add_to_cart": true,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_NkLMaB": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "<style>\n.feature-section{\n  max-width:1400px;\n  margin:120px auto;\n  padding:0 40px;\n}\n\n.feature-grid{\n  display:grid;\n  grid-template-columns:1fr 1fr;\n  gap:80px;\n  align-items:center;\n}\n\n.feature-grid.reverse{\n  direction:rtl;\n}\n\n.feature-grid.reverse > *{\n  direction:ltr;\n}\n\n.feature-image img{\n  width:100%;\n  border-radius:24px;\n  display:block;\n}\n\n.feature-content .subtitle{\n  font-size:14px;\n  letter-spacing:2px;\n  text-transform:uppercase;\n  opacity:.6;\n  margin-bottom:12px;\n}\n\n.feature-content h2{\n  font-size:56px;\n  line-height:1;\n  margin:0 0 24px;\n  font-weight:700;\n}\n\n.feature-content .desc{\n  font-size:20px;\n  line-height:1.8;\n  opacity:.8;\n}\n\n.feature-dark{\n  background:#0a0a0a;\n  color:#fff;\n  padding:120px 0;\n}\n\n.feature-light{\n  background:#f5f5f7;\n  color:#111;\n  padding:120px 0;\n}\n\n.feature-full{\n  text-align:center;\n  max-width:1600px;\n  margin:auto;\n}\n\n.feature-full img{\n  width:100%;\n  border-radius:24px;\n}\n\n.feature-full .subtitle{\n  margin-top:60px;\n  font-size:14px;\n  letter-spacing:3px;\n  text-transform:uppercase;\n  opacity:.7;\n}\n\n.feature-full h2{\n  font-size:80px;\n  margin:20px 0;\n  line-height:1;\n}\n\n.feature-full .desc{\n  max-width:800px;\n  margin:auto;\n  font-size:22px;\n  line-height:1.8;\n}\n\n@media(max-width:768px){\n\n  .feature-grid{\n    grid-template-columns:1fr;\n    gap:40px;\n  }\n\n  .feature-grid.reverse{\n    direction:ltr;\n  }\n\n  .feature-content h2{\n    font-size:36px;\n  }\n\n  .feature-full h2{\n    font-size:48px;\n  }\n\n}\n</style>\n\n{% for item in product.metafields.custom.feature_blocks.value %}\n\n{% assign layout = item.layout | downcase %}\n{% assign bg = item.background | downcase %}\n\n<div class=\"{% if bg == 'dark' %}feature-dark{% else %}feature-light{% endif %}\">\n\n{% if layout == 'full' %}\n\n<div class=\"feature-section feature-full\">\n\n<img\nsrc=\"{{ item.image | image_url: width: 2000 }}\"\nalt=\"{{ item.title }}\"\n>\n\n<div class=\"subtitle\">\n{{ item.subtitle }}\n</div>\n\n<h2>\n{{ item.title }}\n</h2>\n\n<div class=\"desc\">\n{{ item.description | metafield_tag }}\n</div>\n\n</div>\n\n{% elsif layout == 'right' %}\n\n<div class=\"feature-section\">\n\n<div class=\"feature-grid reverse\">\n\n<div class=\"feature-image\">\n<img\nsrc=\"{{ item.image | image_url: width: 1600 }}\"\nalt=\"{{ item.title }}\"\n>\n</div>\n\n<div class=\"feature-content\">\n\n<div class=\"subtitle\">\n{{ item.subtitle }}\n</div>\n\n<h2>\n{{ item.title }}\n</h2>\n\n<div class=\"desc\">\n{{ item.description | metafield_tag }}\n</div>\n\n</div>\n\n</div>\n\n</div>\n\n{% else %}\n\n<div class=\"feature-section\">\n\n<div class=\"feature-grid\">\n\n<div class=\"feature-image\">\n<img\nsrc=\"{{ item.image | image_url: width: 1600 }}\"\nalt=\"{{ item.title }}\"\n>\n</div>\n\n<div class=\"feature-content\">\n\n<div class=\"subtitle\">\n{{ item.subtitle }}\n</div>\n\n<h2>\n{{ item.title }}\n</h2>\n\n<div class=\"desc\">\n{{ item.description | metafield_tag }}\n</div>\n\n</div>\n\n</div>\n\n</div>\n\n{% endif %}\n\n</div>\n\n{% endfor %}",
+        "background_color": "{{ settings.color_palette.background }}",
+        "section_width": "full-width",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "custom_liquid_T9aAmQ": {
+      "type": "custom-liquid",
+      "name": "t:names.custom_liquid",
+      "settings": {
+        "custom_liquid": "{% assign current_variant = product.selected_or_first_available_variant %}\n{% assign sale_price = current_variant.price %}\n{% assign original_price = current_variant.compare_at_price %}\n{% assign shipping_threshold = 30000 %}\n\n<div class=\"rynow-benefits\">\n  <div class=\"rynow-benefit\"><b>✓</b><span><strong>100% Genuine Products</strong><small>Authentic products from trusted brands</small></span></div>\n  <div class=\"rynow-benefit\"><b>✓</b><span><strong>Malaysia Local Warranty</strong><small>Local support when you need it</small></span></div>\n  <div class=\"rynow-benefit\"><b>✓</b><span><strong>Fast Nationwide Shipping</strong><small>Secure delivery across Malaysia</small></span></div>\n  <div class=\"rynow-benefit\"><b>↗</b><span>{% if sale_price >= shipping_threshold %}<strong>Free shipping unlocked</strong><small>This product qualifies for free nationwide shipping</small>{% else %}<strong>Free shipping above RM300</strong><small>Add more items to unlock free nationwide shipping</small>{% endif %}</span></div>\n</div>\n\n{% if original_price > sale_price %}\n  {% assign savings = original_price | minus: sale_price %}\n  <div class=\"rynow-savings\">Save {{ savings | money }} on this product</div>\n{% endif %}\n\n<style>\n.rynow-benefits{display:grid;gap:0;margin:24px 0;padding:8px 16px;border:1px solid rgba(0,0,0,.12);border-radius:12px;background:rgba(0,0,0,.03)}\n.rynow-benefit{display:flex;gap:12px;align-items:flex-start;padding:12px 0}\n.rynow-benefit+.rynow-benefit{border-top:1px solid rgba(0,0,0,.1)}\n.rynow-benefit b{display:grid;place-items:center;flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:#111;color:#fff;font-size:13px}\n.rynow-benefit strong,.rynow-benefit small{display:block}\n.rynow-benefit small{margin-top:2px;opacity:.65}\n.rynow-savings{display:inline-block;margin:0 0 20px;padding:7px 11px;border-radius:999px;background:#e7f7ed;color:#08763f;font-weight:600;font-size:14px}\n</style>",
+        "background_color": "{{ settings.color_palette.color4 }}",
+        "section_width": "page-width",
+        "padding-block-start": 42,
+        "padding-block-end": 0
+      }
+    },
+    "17854307491360cd7e": {
+      "type": "_blocks",
+      "blocks": {
+        "judge_me_reviews_review_widget_9D8tjB": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_9D8tjB"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "{{ settings.color_palette.background }}",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "rynow_cross_sell": {
+      "type": "_blocks",
+      "blocks": {
+        "rynow_cross_sell": {
+          "type": "rynow-cross-sell",
+          "settings": {
+            "heading": "Complete your kit"
+          }
+        }
+      },
+      "block_order": [
+        "rynow_cross_sell"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "{{ settings.color_palette.background }}",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "rynow_confidence": {
+      "type": "_blocks",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "{{ settings.color_palette.background }}",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      },
+      "blocks": {
+        "rynow_conf": {
+          "type": "rynow-confidence",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "rynow_conf"
+      ]
+    }
+  },
+  "order": [
+    "main",
+    "rynow_confidence",
+    "custom_liquid_NkLMaB",
+    "custom_liquid_T9aAmQ",
+    "rynow_cross_sell",
+    "17854307491360cd7e"
+  ]
+}
