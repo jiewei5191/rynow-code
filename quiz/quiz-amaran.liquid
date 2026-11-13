@@ -1,0 +1,262 @@
+
+<div class="quiz" id="quiz-{{ section.id }}">
+  <div class="quiz__sparks" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="quiz__fx" aria-hidden="true"></div>
+  <div class="quiz__intro" data-quiz-intro>
+    <p class="quiz__eyebrow">{{ section.settings.eyebrow }}</p>
+    <h2 class="quiz__title">{{ section.settings.heading }}</h2>
+    <p class="quiz__sub">{{ section.settings.subheading }}</p>
+    <p class="quiz__meta">3 questions &middot; 30 seconds &middot; no email needed</p>
+    <button class="quiz__btn quiz__btn--primary" type="button" data-quiz-start>Start the quiz</button>
+  </div>
+
+  <div class="quiz__step" data-quiz-step hidden>
+    <p class="quiz__progress"><span data-quiz-count>Question 1 of 3</span></p>
+    <div class="quiz__bar"><div class="quiz__bar-fill" data-quiz-fill></div></div>
+    <div class="quiz__bar-labels"><span>2800K</span><span>6500K</span></div>
+    <h3 class="quiz__q" data-quiz-question></h3>
+    <div class="quiz__options" data-quiz-options></div>
+    <button class="quiz__back" type="button" data-quiz-back hidden>&larr; Back</button>
+  </div>
+
+  <div class="quiz__result" data-quiz-result hidden>
+    <p class="quiz__eyebrow">Your match</p>
+    <div class="quiz__result-grid">
+      <div class="quiz__result-media"><img data-quiz-img src="" alt="" loading="lazy"></div>
+      <div class="quiz__result-info">
+        <h3 class="quiz__result-name" data-quiz-name></h3>
+        <p class="quiz__price"><span data-quiz-price></span> <s data-quiz-was></s> <span class="quiz__save">Save 20%</span></p>
+        <p class="quiz__why" data-quiz-why></p>
+        <div class="quiz__actions">
+          <a class="quiz__btn quiz__btn--primary" data-quiz-view href="#">View product</a>
+          <button class="quiz__btn quiz__btn--ghost" type="button" data-quiz-add>Add to cart</button>
+        </div>
+        <button class="quiz__retake" type="button" data-quiz-retake>Retake the quiz</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% stylesheet %}
+  .quiz { background: #0f141b; background-image: radial-gradient(640px 320px at 50% -40px, rgba(74,155,224,0.25), rgba(74,155,224,0) 70%); background-repeat: no-repeat; background-position: center top; color: #f2f6fb; padding: 64px 20px 72px; text-align: center; position: relative; overflow: hidden; }
+  .quiz::before { content: ""; position: absolute; inset: 0; background-image: url("https://cdn.shopify.com/s/files/1/0693/9230/2147/files/logo-amaran-clean-v2.png?v=1794584832"); background-size: 150% auto; background-position: center; background-repeat: no-repeat; filter: blur(28px); opacity: 0.18; pointer-events: none; animation: quizDrift 36s ease-in-out infinite alternate; }
+  .quiz__intro, .quiz__step, .quiz__result { position: relative; z-index: 1; }
+  .quiz__sparks { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+  .quiz__sparks span { position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #4a9be0; box-shadow: 0 0 14px 2px #4a9be0; opacity: .5; animation: quizFloat 7s ease-in-out infinite alternate; }
+  .quiz__sparks span:nth-child(1) { left: 8%; top: 68%; }
+  .quiz__sparks span:nth-child(2) { left: 16%; top: 24%; animation-duration: 9s; animation-delay: -2s; }
+  .quiz__sparks span:nth-child(3) { left: 86%; top: 30%; animation-duration: 8s; animation-delay: -4s; }
+  .quiz__sparks span:nth-child(4) { left: 92%; top: 72%; animation-duration: 10s; animation-delay: -1s; }
+  .quiz__sparks span:nth-child(5) { left: 48%; top: 12%; width: 4px; height: 4px; animation-duration: 6s; animation-delay: -3s; }
+  .quiz__sparks span:nth-child(6) { left: 68%; top: 84%; width: 4px; height: 4px; animation-duration: 11s; animation-delay: -5s; }
+  .quiz__fx { position: absolute; inset: 0; background: radial-gradient(circle at 50% 42%, rgba(255,205,130,0.95), rgba(255,170,60,0.5) 50%, transparent 78%); opacity: 0; pointer-events: none; z-index: 2; }
+  .quiz__bar-fill { position: relative; }
+  .quiz__bar-fill::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 25%, rgba(255,255,255,0.85) 50%, transparent 75%); transform: translateX(-100%); animation: quizShimmer 2.6s ease-in-out infinite; }
+  @keyframes quizDrift { from { transform: translate3d(-2%, -1%, 0) scale(1); } to { transform: translate3d(2%, 1.5%, 0) scale(1.08); } }
+  @keyframes quizFloat { from { transform: translateY(0); opacity: .3; } to { transform: translateY(-26px); opacity: .7; } }
+  @keyframes quizShimmer { 0% { transform: translateX(-100%); } 60%, 100% { transform: translateX(100%); } }
+  @media (prefers-reduced-motion: reduce) { .quiz::before, .quiz__sparks span, .quiz__bar-fill::after { animation: none; } }
+  .quiz__eyebrow { font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #4a9be0; margin: 0 0 14px; font-weight: 600; }
+  .quiz__title { font-size: 34px; line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.01em; color: #f2f6fb; }
+  .quiz__sub { font-size: 17px; line-height: 1.55; color: #9aa8ba; margin: 0 auto 8px; max-width: 520px; }
+  .quiz__meta { font-size: 13px; color: #9aa8ba; margin: 0 0 28px; opacity: 0.8; }
+  .quiz__step, .quiz__result { scroll-margin-top: 96px; }
+
+  .quiz__btn { display: inline-block; border: 0; border-radius: 999px; padding: 13px 30px; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; line-height: 1.2; }
+  .quiz__btn--primary { background: #4a9be0; color: #0b1220; }
+  .quiz__btn--primary:hover { opacity: 0.92; color: #0b1220; }
+  .quiz__btn--ghost { background: rgba(255,255,255,0.08); color: #f2f6fb; }
+  .quiz__btn--ghost:hover { background: rgba(255,255,255,0.14); }
+  .quiz__progress { font-size: 13px; color: #9aa8ba; margin: 0 0 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .quiz__bar { max-width: 520px; height: 4px; border-radius: 999px; background: rgba(255,255,255,0.14); margin: 0 auto 8px; overflow: hidden; }
+  .quiz__bar-fill { height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, #2478d4, #6db3f2, #eaf4ff); transition: width 0.35s ease; }
+  .quiz__bar-labels { display: flex; justify-content: space-between; max-width: 520px; margin: 0 auto 24px; font-size: 11px; letter-spacing: 0.12em; color: #9aa8ba; opacity: 0.75; }
+  .quiz__q { font-size: 26px; line-height: 1.3; margin: 0 0 8px; color: #f2f6fb; }
+  .quiz__options { display: grid; gap: 12px; max-width: 520px; margin: 24px auto 0; }
+  .quiz__option { width: 100%; padding: 17px 20px; border: 1px solid #2a3547; border-radius: 14px; background: #18202b; font-size: 16px; line-height: 1.4; cursor: pointer; text-align: left; color: #f2f6fb; transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+  .quiz__option:hover { border-color: #4a9be0; box-shadow: 0 0 0 1px #4a9be0, 0 8px 30px rgba(0,0,0,0.35); transform: translateY(-2px); }
+  .quiz__back { background: none; border: 0; color: #9aa8ba; font-size: 14px; cursor: pointer; margin-top: 26px; padding: 8px 12px; }
+  .quiz__back:hover { color: #f2f6fb; }
+  .quiz__result-grid { display: grid; grid-template-columns: 300px 1fr; gap: 36px; align-items: start; text-align: left; margin-top: 32px; max-width: 780px; margin-left: auto; margin-right: auto; }
+  .quiz__result-media img { width: 100%; height: auto; border-radius: 16px; display: block; }
+  .quiz__result-name { font-size: 26px; line-height: 1.3; margin: 0 0 10px; color: #f2f6fb; }
+  .quiz__price { font-size: 22px; margin: 0 0 12px; color: #f2f6fb; }
+  .quiz__price s { color: #9aa8ba; font-size: 16px; margin-left: 6px; }
+  .quiz__save { color: #4a9be0; font-size: 14px; font-weight: 700; margin-left: 8px; }
+  .quiz__why { font-size: 16px; line-height: 1.6; color: #d3dce8; margin: 0 0 26px; }
+  .quiz__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .quiz__retake { background: none; border: 0; color: #9aa8ba; font-size: 14px; cursor: pointer; margin-top: 22px; padding: 8px 0; text-decoration: underline; }
+  .quiz__retake:hover { color: #f2f6fb; }
+  @media (max-width: 640px) {
+    .quiz { padding: 48px 20px 56px; }
+    .quiz__title { font-size: 27px; }
+    .quiz::before { background-size: 240% auto; background-position: center 12%; }
+    .quiz__q { font-size: 22px; }
+    .quiz__result-grid { grid-template-columns: 1fr; gap: 20px; margin-top: 24px; }
+    .quiz__result-media { max-width: 320px; margin: 0 auto; }
+    .quiz__result-info { text-align: center; }
+    .quiz__actions { justify-content: center; }
+  }
+{% endstylesheet %}
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script>
+(function () {
+  var root = document.getElementById('quiz-{{ section.id }}');
+  function syncFormsGate(show) {
+    var g = document.getElementById('quiz-forms-gate');
+    if (show) {
+      if (!g) {
+        g = document.createElement('style');
+        g.id = 'quiz-forms-gate';
+        g.textContent = 'shopify-forms-embed{display:none!important}';
+        document.head.appendChild(g);
+      }
+    } else if (g) { g.remove(); }
+  }
+  syncFormsGate(true);
+  if (!root) return;
+  var DATA = {"questions": [["What do you mainly shoot?", [["photo", "Photos & portraits"], ["video", "Video & short-form"], ["live", "Livestreaming"], ["colour", "Creative colour looks"]]], ["Where will you use it?", [["home", "At home / small room"], ["studio", "In a studio"], ["outdoor", "Outdoors / on location"]]], ["What is your budget?", [["under500", "Under RM500"], ["mid", "RM500 - RM900"], ["high", "RM900 - RM1,500"], ["pro", "Over RM1,500"]]]], "products": [{"key": "halo60x", "name": "Halo 60x", "handle": "amaran-halo-60x-bi-color-led-light", "price": 359, "was": 449, "from_price": false, "img": "https://cdn.shopify.com/s/files/1/0693/9230/2147/files/a470e35c-bc0e-40e0-b06b-5bf4cee43d45_8ca7fb34-0a2c-439b-a4ed-cac16c514eec.png?v=1785942307", "why": "56W of Bi-Color light in a pocket-sized body. The easiest way to start lighting your videos and streams.", "variant": "43622496403523"}, {"key": "halo100x", "name": "Halo 100x", "handle": "amaran-halo-100x-bi-color-cob-led-light", "price": 503, "was": 629, "from_price": false, "img": "https://cdn.shopify.com/s/files/1/0693/9230/2147/files/4f6f735b-164a-4d47-83be-fa0dd202a080_8bb45b19-4c83-4022-82a7-3dc55d67ff58.png?v=1785944232", "why": "100W Bi-Color in an ultra-compact body. Enough power for a home studio, small enough to take anywhere.", "variant": "43622496567363"}, {"key": "halo200x", "name": "Halo 200x", "handle": "amaran-halo-200x-bi-color-cob-led-light", "price": 735, "was": 919, "from_price": false, "img": "https://cdn.shopify.com/s/files/1/0693/9230/2147/files/5bba6a78-5959-4878-8798-7a184219a712_f9f5bd33-dc3d-4634-82c5-27ee7d92b104.png?v=1785944468", "why": "200W of clean Bi-Color light for a serious home studio or small set.", "variant": "43622496534595"}, {"key": "halo300x", "name": "Halo 300x", "handle": "amaran-halo-300x-bi-color-cob-led-light", "price": 871, "was": 1089, "from_price": false, "img": "https://cdn.shopify.com/s/files/1/0693/9230/2147/files/11fb7411-878d-463f-833c-637045348406.png?v=1785945268", "why": "300W Bi-Color COB for studio work. Bright enough for key light duty with Bowens modifiers.", "variant": "43622496436291"}, {"key": "halo600x", "name": "Halo 600x", "handle": "amaran-halo-600x-bi-color-cob-led-light", "price": 1359, "was": 1699, "from_price": false, "img": "https://cdn.shopify.com/s/files/1/0693/9230/2147/files/1b8640dc-bf5e-4d77-9a99-0f327d50585a.png?v=1785945566", "why": "600W of professional Bi-Color power. The studio workhorse.", "variant": "43622496501827"}, {"key": "ray60c", "name": "RAY 60c", "handle": "amaran-ray-60c-rgb-cob-led-video-light", "price": 599, "was": 749, "from_price": false, "img": "https://cdn.shopify.com/s/files/1/0693/9230/2147/files/b64388da-dcc6-4dde-97e1-62e8447fbfaf.png?v=1786081534", "why": "65W of full RGB colour in a portable body. Creative looks, anywhere.", "variant": "43622496370755"}, {"key": "ray120c", "name": "RAY 120c", "handle": "amaran-ray-120c-rgb-cob-led-video-light-120w-full-color-portable-photography-light-599g", "price": 807, "was": 1009, "from_price": false, "img": "https://cdn.shopify.com/s/files/1/0693/9230/2147/files/my-11134207-820lb-mpaf6y55jpcf39.jpg?v=1786359787", "why": "120W RGB COB, just 599g. Big colour, small bag.", "variant": "43367468990531"}, {"key": "ray360c", "name": "RAY 360c", "handle": "amaran-ray-360c-omnicolor-cob-led-light", "price": 1351, "was": 1689, "from_price": false, "img": "https://cdn.shopify.com/s/files/1/0693/9230/2147/files/amaran-ray-360c-rgb-led-monolight.jpg?v=1793890302", "why": "360W OmniColor with IP54 weather sealing. Full-colour studio power, indoors or out.", "variant": "43622496469059"}, {"key": "ray660c", "name": "RAY 660c", "handle": "amaran-ray-660c-omnicolor-cob-led-light", "price": 2391, "was": 2989, "from_price": false, "img": "https://cdn.shopify.com/s/files/1/0693/9230/2147/files/117d80bb-4f3a-44a9-b16f-5514d1288b7b_8fbbcecc-49ef-4f70-8637-c50c03f32ec4.png?v=1786081175", "why": "660W of full-colour professional power. The brightest Amaran we carry.", "variant": "43622496600131"}], "weights": {"photo": {"halo60x": 2, "halo100x": 2, "halo200x": 2, "halo300x": 2, "halo600x": 2}, "video": {"halo100x": 2, "halo200x": 2, "halo300x": 1, "ray60c": 1, "ray120c": 1}, "live": {"halo60x": 3, "halo100x": 2, "ray60c": 2}, "colour": {"ray60c": 3, "ray120c": 3, "ray360c": 3, "ray660c": 3}, "home": {"halo60x": 3, "halo100x": 2, "ray60c": 2}, "studio": {"halo200x": 2, "halo300x": 3, "halo600x": 3, "ray360c": 3, "ray660c": 3}, "outdoor": {"halo60x": 2, "halo100x": 2, "ray60c": 3, "ray120c": 3}, "under500": {"halo60x": 3}, "mid": {"halo100x": 3, "halo200x": 2, "ray60c": 2, "ray120c": 2, "halo300x": 1}, "high": {"halo300x": 3, "halo600x": 2, "ray360c": 3, "ray120c": 1}, "pro": {"halo600x": 2, "ray660c": 3, "ray360c": 1}}};
+  var total = DATA.questions.length;
+  var step = -1;
+  var answers = [];
+  var intro = root.querySelector('[data-quiz-intro]');
+  var stepEl = root.querySelector('[data-quiz-step]');
+  var resultEl = root.querySelector('[data-quiz-result]');
+  var countEl = root.querySelector('[data-quiz-count]');
+  var fillEl = root.querySelector('[data-quiz-fill]');
+  var qEl = root.querySelector('[data-quiz-question]');
+  var optsEl = root.querySelector('[data-quiz-options]');
+  var backBtn = root.querySelector('[data-quiz-back]');
+  var fxEl = root.querySelector('.quiz__fx');
+  var FXDUR = parseFloat('0.9s') || 0.8;
+  function motionOK() {
+    return !!window.gsap && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+  function firePulse() {
+    if (!motionOK() || !fxEl) return;
+    gsap.killTweensOf(fxEl);
+    gsap.timeline()
+      .to(fxEl, { opacity: 0.75, duration: FXDUR * 0.2, ease: 'power1.in' })
+      .to(fxEl, { opacity: 0.75, duration: FXDUR * 0.45, ease: 'none' })
+      .to(fxEl, { opacity: 0, duration: FXDUR * 0.8, ease: 'power2.out' });
+  }
+
+  function money(n) { return 'RM' + n.toLocaleString('en-MY'); }
+
+  function renderQuestion() {
+    var q = DATA.questions[step];
+    countEl.textContent = 'Question ' + (step + 1) + ' of ' + total;
+    fillEl.style.width = Math.round(((step + 1) / total) * 100) + '%';
+    qEl.textContent = q[0];
+    optsEl.innerHTML = '';
+    q[1].forEach(function (opt) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'quiz__option';
+      b.textContent = opt[1];
+      b.addEventListener('click', function () {
+        answers[step] = opt[0];
+        step++;
+        if (step < total) { firePulse(); renderQuestion(); } else { showResult(); }
+      });
+      optsEl.appendChild(b);
+    });
+    backBtn.hidden = step === 0;
+    intro.hidden = true;
+    resultEl.hidden = true;
+    stepEl.hidden = false;
+    if (motionOK()) {
+      gsap.fromTo([countEl, qEl], { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: 'power3.out' });
+      gsap.fromTo(optsEl.querySelectorAll('.quiz__option'), { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.65, stagger: 0.09, ease: 'power3.out', delay: 0.12 });
+    }
+  }
+
+  function pickWinner() {
+    var best = null;
+    var bestScore = -1;
+    DATA.products.forEach(function (p) {
+      var s = 0;
+      answers.forEach(function (a) {
+        var w = DATA.weights[a] || {};
+        if (w[p.key]) s += w[p.key];
+      });
+      if (s > bestScore) { bestScore = s; best = p; }
+    });
+    return best;
+  }
+
+  function showResult() {
+    var p = pickWinner();
+    syncFormsGate(false);
+    stepEl.hidden = true;
+    intro.hidden = true;
+    resultEl.hidden = false;
+    var img = root.querySelector('[data-quiz-img]');
+    img.src = p.img;
+    img.alt = p.name;
+    root.querySelector('[data-quiz-name]').textContent = p.name;
+    root.querySelector('[data-quiz-price]').textContent = (p.from_price ? 'From ' : '') + money(p.price);
+    root.querySelector('[data-quiz-was]').textContent = money(p.was);
+    root.querySelector('[data-quiz-why]').textContent = p.why;
+    root.querySelector('[data-quiz-view]').href = '/products/' + p.handle;
+    var addBtn = root.querySelector('[data-quiz-add]');
+    addBtn.dataset.variant = p.variant;
+    addBtn.textContent = 'Add to cart';
+    resultEl.scrollIntoView({ behavior: 'auto', block: 'start' });
+    if (motionOK() && fxEl) {
+      gsap.fromTo(resultEl, { scale: 0.96, y: 12, opacity: 0 }, { scale: 1, y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' });
+      gsap.killTweensOf(fxEl);
+      gsap.set(fxEl, { opacity: 0 });
+      gsap.timeline({ delay: 0.15 })
+        .to(fxEl, { opacity: 0.55, duration: FXDUR * 0.25, ease: 'power1.in' })
+        .to(fxEl, { opacity: 0.55, duration: FXDUR * 0.4, ease: 'none' })
+        .to(fxEl, { opacity: 0, duration: FXDUR * 0.75, ease: 'power2.out' });
+    }
+  }
+
+  root.querySelector('[data-quiz-start]').addEventListener('click', function () {
+    step = 0;
+    answers = [];
+    renderQuestion();
+  });
+  backBtn.addEventListener('click', function () {
+    if (step > 0) { step--; renderQuestion(); }
+  });
+  root.querySelector('[data-quiz-retake]').addEventListener('click', function () {
+    step = -1;
+    answers = [];
+    resultEl.hidden = true;
+    stepEl.hidden = true;
+    intro.hidden = false;
+    syncFormsGate(true);
+  });
+  root.querySelector('[data-quiz-add]').addEventListener('click', function () {
+    var btn = root.querySelector('[data-quiz-add]');
+    var variantId = btn.dataset.variant;
+    btn.textContent = 'Adding...';
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: variantId, quantity: 1 })
+    }).then(function (r) {
+      if (r.ok) { window.location.href = '/cart'; }
+      else { window.location.href = root.querySelector('[data-quiz-view]').href; }
+    }).catch(function () {
+      window.location.href = root.querySelector('[data-quiz-view]').href;
+    });
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Amaran product finder",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "AMARAN" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Find your Amaran light" },
+    { "type": "textarea", "id": "subheading", "label": "Subheading", "default": "Answer 3 quick questions and we will match you with the right light for how you shoot." }
+  ],
+  "presets": [{ "name": "Amaran product finder" }]
+}
+{% endschema %}

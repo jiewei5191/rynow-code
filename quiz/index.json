@@ -1,0 +1,488 @@
+{
+  "sections": {
+    "hero_fTpYRU": {
+      "type": "hero",
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/rynow-1111-hero-final-2026.png",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "shopify://collections/11-11-creator-deals",
+        "open_in_new_tab": true,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "full-width",
+        "section_height": "auto",
+        "section_height_custom": 50,
+        "background_color": "",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "hero_ftrfUy": {
+      "type": "hero",
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "video",
+        "image_1": "shopify://shop_images/rynow-1111-hero-final-2026.png",
+        "video_1": "shopify://files/videos/A2手机闪光灯广告片英文.mp4",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "shopify://products/godox-a2-smartphone-xenon-flash-ttl-hss-1-8000s-magnetic-flash-with-bi-color-led-light",
+        "open_in_new_tab": true,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "full-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "background_color": "{{ settings.color_palette.foreground }}",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "1785342945c384b051": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e984d8c_DAGyQ6": {
+          "type": "ai_gen_block_e984d8c",
+          "settings": {
+            "show_badge": true,
+            "badge_text": "Available Now",
+            "show_image": true,
+            "product_image": "shopify://shop_images/26e04fe6-623c-4792-a482-272266464173.png",
+            "heading": "Godox Lux Junior II",
+            "description": "In stock now — the retro flash, ready to ship. Compact, characterful, and made for everyday shooting.",
+            "show_launch_date": false,
+            "launch_date_label": "Coming in",
+            "launch_date": "8th August 2026",
+            "show_notify_button": true,
+            "notify_button_text": "Shop Now",
+            "notify_link": "shopify://products/godox-lux-junior-ii-s-retro-flash",
+            "desktop_width_percent": 100,
+            "text_alignment": "center",
+            "padding": 40,
+            "spacing": 24,
+            "border_radius": 16,
+            "background_color": "#000000",
+            "heading_color": "#ffffff",
+            "description_color": "#d2d2d7",
+            "badge_background": "#ff8400",
+            "badge_text_color": "#ffffff",
+            "badge_font_size": 12,
+            "badge_border_radius": 20,
+            "image_max_width": 900,
+            "image_border_radius": 12,
+            "heading_size": 40,
+            "description_size": 16,
+            "date_background": "#ff8400",
+            "date_text_color": "#ffffff",
+            "date_font_size": 20,
+            "date_border_radius": 40,
+            "button_background": "#0071e3",
+            "button_text_color": "#ffffff",
+            "button_hover_background": "#005bb5",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_border_radius": 40
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e984d8c_DAGyQ6"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "full-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "{{ settings.color_palette.background }}",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "17920818349c675d4c": {
+      "type": "_blocks",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      },
+      "blocks": {
+        "rynow_grid": {
+          "type": "rynow-featured-grid",
+          "settings": {
+            "collection": "11-11-creator-deals-in-stock",
+            "heading": "11.11 Creator Deals — In Stock",
+            "products_to_show": 8,
+            "show_view_all": true,
+            "eyebrow": "11.11 · 1–13 NOV"
+          }
+        }
+      },
+      "block_order": [
+        "rynow_grid"
+      ]
+    },
+    "1793204019a21e0613": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c6f988c_qE4bTk": {
+          "type": "ai_gen_block_c6f988c",
+          "settings": {
+            "desktop_width_percent": 100,
+            "headline": "Create more. Spend less.",
+            "date_text": "01–13 NOV 2026",
+            "footer_text": "Offer terms apply.",
+            "brand_1": "Godox",
+            "discount_1": "20",
+            "accent_1": "#f47a20",
+            "brand_2": "amaran",
+            "discount_2": "20",
+            "accent_2": "#2478d4",
+            "brand_3": "SmallRig",
+            "discount_3": "20",
+            "accent_3": "#d9363e",
+            "brand_4": "",
+            "discount_4": "",
+            "accent_4": "#343a40",
+            "benefit_heading": "Storewide 20% off",
+            "benefit_copy": "No minimum spend. No code needed — the discount is already applied.",
+            "shipping_copy": "Free shipping over RM300",
+            "ivory_color": "#f7f3ea",
+            "ink_color": "#10243a",
+            "ice_color": "#b9ddf2",
+            "border_color": "#c8c9c4",
+            "panel_text_color": "#ffffff",
+            "panel_border_color": "#526174",
+            "muted_color": "#565c63"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c6f988c_qE4bTk"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
+    "rynow_category_row": {
+      "type": "_blocks",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      },
+      "blocks": {
+        "rynow_cat": {
+          "type": "rynow-category-row",
+          "settings": {
+            "heading": "Shop by category",
+            "eyebrow": "BROWSE"
+          }
+        }
+      },
+      "block_order": [
+        "rynow_cat"
+      ]
+    },
+    "rynow_trust_strip": {
+      "type": "_blocks",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      },
+      "blocks": {
+        "rynow_trust": {
+          "type": "rynow-trust-strip",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "rynow_trust"
+      ]
+    },
+    "rynow_guides_row": {
+      "type": "_blocks",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      },
+      "blocks": {
+        "rynow_guides": {
+          "type": "rynow-guides-row",
+          "settings": {
+            "heading": "From RYNOW Lab",
+            "eyebrow": "RYNOW LAB"
+          }
+        }
+      },
+      "block_order": [
+        "rynow_guides"
+      ]
+    },
+    "rynow_new_in_grid": {
+      "type": "_blocks",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      },
+      "blocks": {
+        "rynow_grid_new": {
+          "type": "rynow-featured-grid",
+          "settings": {
+            "collection": "new-in",
+            "heading": "New In",
+            "products_to_show": 8,
+            "show_view_all": true,
+            "eyebrow": "FRESH ARRIVALS"
+          }
+        }
+      },
+      "block_order": [
+        "rynow_grid_new"
+      ]
+    },
+    "rynow_brands": {
+      "type": "rynow-brands",
+      "settings": {
+        "brand_collections": [
+          "amaran",
+          "godox",
+          "triopo",
+          "smallrig",
+          "zhiyun",
+          "feelworld",
+          "lensgo",
+          "boya",
+          "portkeys",
+          "fomito"
+        ]
+      }
+    },
+    "rynow_ad600pro": {
+      "type": "rynow-ad600pro",
+      "settings": {
+        "eyebrow": "Godox AD600Pro II",
+        "heading": "One flash. Anywhere.",
+        "subheading": "600Ws of studio power, built for the outdoors.",
+        "price": "RM2,559",
+        "compare_at_price": "RM3,199",
+        "button_label": "Shop AD600Pro II",
+        "button_link": "https://rynow.co/products/godox-ad600pro-ii-outdoor-flash"
+      }
+    },
+    "quiz-home": {
+      "type": "quiz-home",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero_fTpYRU",
+    "rynow_ad600pro",
+    "rynow_category_row",
+    "17920818349c675d4c",
+    "1793204019a21e0613",
+    "rynow_new_in_grid",
+    "hero_ftrfUy",
+    "1785342945c384b051",
+    "rynow_trust_strip",
+    "rynow_guides_row",
+    "quiz-home",
+    "rynow_brands"
+  ]
+}
