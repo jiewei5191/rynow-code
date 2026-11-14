@@ -19,7 +19,6 @@
 
     {%- render 'meta-tags' -%}
     {%- render 'stylesheets' -%}
-    {{ 'lenis.css' | asset_url | stylesheet_tag }}
     {%- render 'card-hover-effect-styles' -%}
     {%- render 'scripts' -%}
     {%- render 'theme-styles-variables' -%}
@@ -173,7 +172,6 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
-    {% render 'lenis' %}
     {% if template.name == 'index' %}{% render 'scroll-reveal' %}{% endif %}
   </body>
 </html>
