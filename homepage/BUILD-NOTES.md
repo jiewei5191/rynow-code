@@ -94,3 +94,8 @@
 - A2 hero STAYS removed (homepage order still starts with `rynow_ad600pro`; section file still orphaned in the theme). Comparison slider, Lenis, scroll-reveal, `templates/product.json` NOT touched.
 - NOTE: the restored banner date "01–13 NOV 2026" is MAIN's value and already past — the owner needs to decide what it should say (or whether to change it). Do NOT invent a new date.
 - Verification: index.json upserted + re-read from the draft, JSON-equality PASS (2026-11-14); remote == local file; diff vs pre-revert file is exactly the 3 restored strings. Live nav verified by independent menu re-read.
+
+## 11.11 dates extended to 17 Nov (2026-11-14, draft only)
+- Owner: change the 11.11 end date to 17 Nov, all products. `templates/index.json` in draft 190045716547: exactly 2 strings changed — grid eyebrow "11.11 · 1–13 NOV" → "11.11 · 1–17 NOV" and deals-block `date_text` "01–13 NOV 2026" → "01–17 NOV 2026". Nothing else changed.
+- A2 hero stays removed; comparison slider, Lenis, scroll-reveal, `templates/product.json` NOT touched. MAIN theme 189966123075 NOT touched. Draft only — ships when the owner publishes the draft.
+- Verification: index.json upserted + re-read from the draft, JSON-equality PASS (2026-11-14); remote == local file (14,612 bytes); both new strings present, both old "13 NOV" strings absent, `rynow_hero_a2` still absent, order unchanged.
