@@ -5,7 +5,7 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/rynow-1111-hero-final-2026.png",
+        "image_1": "shopify://shop_images/rynow-1111-poster-17nov.png",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
@@ -41,7 +41,7 @@
       "settings": {
         "media_type_1": "video",
         "image_1": "shopify://shop_images/rynow-1111-hero-final-2026.png",
-        "video_1": "shopify://files/videos/A2\u624b\u673a\u95ea\u5149\u706f\u5e7f\u544a\u7247\u82f1\u6587.mp4",
+        "video_1": "shopify://files/videos/A2手机闪光灯广告片英文.mp4",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
@@ -82,7 +82,7 @@
             "show_image": true,
             "product_image": "shopify://shop_images/26e04fe6-623c-4792-a482-272266464173.png",
             "heading": "Godox Lux Junior II",
-            "description": "In stock now \u2014 the retro flash, ready to ship. Compact, characterful, and made for everyday shooting.",
+            "description": "In stock now — the retro flash, ready to ship. Compact, characterful, and made for everyday shooting.",
             "show_launch_date": false,
             "launch_date_label": "Coming in",
             "launch_date": "8th August 2026",
@@ -186,10 +186,10 @@
           "type": "rynow-featured-grid",
           "settings": {
             "collection": "11-11-creator-deals-in-stock",
-            "heading": "11.11 Creator Deals \u2014 In Stock",
+            "heading": "11.11 Creator Deals — In Stock",
             "products_to_show": 8,
             "show_view_all": true,
-            "eyebrow": "11.11 \u00b7 1\u201317 NOV"
+            "eyebrow": "11.11 · 1–17 NOV"
           }
         }
       },
@@ -205,7 +205,7 @@
           "settings": {
             "desktop_width_percent": 100,
             "headline": "Create more. Spend less.",
-            "date_text": "01\u201317 NOV 2026",
+            "date_text": "01–17 NOV 2026",
             "footer_text": "Offer terms apply.",
             "brand_1": "Godox",
             "discount_1": "20",
@@ -220,7 +220,7 @@
             "discount_4": "",
             "accent_4": "#343a40",
             "benefit_heading": "Storewide 20% off",
-            "benefit_copy": "No minimum spend. No code needed \u2014 the discount is already applied.",
+            "benefit_copy": "No minimum spend. No code needed — the discount is already applied.",
             "shipping_copy": "Free shipping over RM300",
             "ivory_color": "#f7f3ea",
             "ink_color": "#10243a",
