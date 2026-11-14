@@ -86,3 +86,11 @@
 - 11.11 teardown settings untouched (Creator Deals heading, "Storewide 20% off" eyebrow, "STOREWIDE 20% OFF" banner all verified unchanged after the edit).
 - Comparison slider KEPT: `sections/rynow-compare-a2.liquid` and `templates/product.json` NOT touched. (Note: the slider's browser verification has since PASSED — parent verified 2026-11-14 18:50: renders, drag works both ways, labels visible, images align across the divider, no distortion.)
 - Verification: index.json upserted + re-read from the draft, JSON-equality PASS (2026-11-14). Homepage look after removal NOT yet verified in a browser — parent to check on the preview link; mobile check by owner.
+
+## 11.11 teardown reverted (2026-11-14, draft + live nav)
+- Owner corrected us: "我的双11 还没完啊" — Godox 11.11 runs to 1 Dec 11:59 (Shopee promotion ID 524163660202368 + Lazada Godox Flash Sale slots). The teardown was premature; the post-11.11 admin flips (tier-discount stacking off, membership email templates, 11.11 collection takedown) are ON HOLD until after 1 Dec.
+- LIVE: "11.11" nav item restored to the Main menu (position 2, after "What's New"), linking to /collections/11-11-creator-deals-in-stock (new MenuItem gid ...664356257859). All other menu items unchanged, original IDs kept.
+- Draft 190045716547 `templates/index.json` restored to MAIN theme 189966123075's values (exactly 3 strings changed): grid heading "11.11 Creator Deals — In Stock", grid eyebrow "11.11 · 1–13 NOV", deals-block `date_text` "01–13 NOV 2026".
+- A2 hero STAYS removed (homepage order still starts with `rynow_ad600pro`; section file still orphaned in the theme). Comparison slider, Lenis, scroll-reveal, `templates/product.json` NOT touched.
+- NOTE: the restored banner date "01–13 NOV 2026" is MAIN's value and already past — the owner needs to decide what it should say (or whether to change it). Do NOT invent a new date.
+- Verification: index.json upserted + re-read from the draft, JSON-equality PASS (2026-11-14); remote == local file; diff vs pre-revert file is exactly the 3 restored strings. Live nav verified by independent menu re-read.
