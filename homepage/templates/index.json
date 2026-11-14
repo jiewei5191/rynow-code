@@ -430,22 +430,9 @@
         "button_label": "Shop AD600Pro II",
         "button_link": "https://rynow.co/products/godox-ad600pro-ii-outdoor-flash"
       }
-    },
-    "rynow_hero_a2": {
-      "type": "rynow-hero-a2",
-      "settings": {
-        "eyebrow": "Godox A2",
-        "heading": "Stop Blaming Your iPhone.",
-        "subheading": "A real xenon flash for your phone. Not a LED.",
-        "price": "RM271",
-        "compare_at_price": "RM339",
-        "button_label": "Shop A2",
-        "button_link": "https://rynow.co/products/godox-a2-smartphone-xenon-flash-ttl-hss-1-8000s-magnetic-flash-with-bi-color-led-light"
-      }
     }
   },
   "order": [
-    "rynow_hero_a2",
     "rynow_ad600pro",
     "rynow_category_row",
     "17920818349c675d4c",

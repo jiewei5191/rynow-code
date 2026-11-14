@@ -79,3 +79,10 @@
   - `templates/product.json` — `rynow_compare_a2` added immediately after `main` in the order list. NOTHING else changed. NOTE: this product.json was edited in the A2-hero draft only — do NOT push it to the repo (`product-page/templates/product.json` already holds the two-column version from the product-page draft; overwriting it would lose that work).
 - MAIN theme 189966123075 NOT touched. Product-page draft 190044602435 NOT touched. Lenis / scroll-reveal files NOT touched.
 - Verification: both files upserted + re-read from the draft, exact-match / JSON-equality PASS (2026-11-14). Slider look/feel NOT yet verified in a browser — parent to check on the preview link; mobile check by owner.
+
+## A2 hero removed from homepage (2026-11-14, draft only)
+- Owner asked to remove the A2 hero from the homepage but keep the comparison slider. `templates/index.json` in draft 190045716547: `rynow_hero_a2` removed from the `order` array AND its whole settings block removed from `sections`. New homepage order: AD600Pro II spotlight (`rynow_ad600pro`) → categories → deals blocks → New In → A2 video banner (`hero_ftrfUy`) → Lux → trust → guides → brands. The expired 11.11 hero was already gone (the A2 hero had replaced it), so nothing else was added or moved.
+- `sections/rynow-hero-a2.liquid` is RETAINED in the theme, untouched (orphaned/unused — restorable later, not deleted).
+- 11.11 teardown settings untouched (Creator Deals heading, "Storewide 20% off" eyebrow, "STOREWIDE 20% OFF" banner all verified unchanged after the edit).
+- Comparison slider KEPT: `sections/rynow-compare-a2.liquid` and `templates/product.json` NOT touched. (Note: the slider's browser verification has since PASSED — parent verified 2026-11-14 18:50: renders, drag works both ways, labels visible, images align across the divider, no distortion.)
+- Verification: index.json upserted + re-read from the draft, JSON-equality PASS (2026-11-14). Homepage look after removal NOT yet verified in a browser — parent to check on the preview link; mobile check by owner.
