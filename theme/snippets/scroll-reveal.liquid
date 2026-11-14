@@ -1,0 +1,101 @@
+{% comment %}
+  Scroll-reveal for the homepage (vanilla JS + CSS, no library).
+  Sections below the hero fade + rise when scrolled into view, once only.
+  Replaces the GSAP ScrollTrigger version: in browser testing its triggers
+  never fired and every section below the hero stayed invisible, so the
+  trigger is IntersectionObserver + CSS transitions instead — same look,
+  and content cannot get stuck hidden (no-JS, reduced-motion or an
+  unsupported observer all leave the page fully visible).
+{% endcomment %}
+<style>
+  html.js-reveal .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  html.js-reveal .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html.js-reveal .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>
+<script>
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var root = document.documentElement;
+    var sections = document.querySelectorAll('#MainContent > .shopify-section');
+    if (!sections.length) return;
+    root.classList.add('js-reveal');
+
+    var groups = [];
+    sections.forEach(function (section, index) {
+      if (index === 0) return; /* hero already animates */
+      section.classList.add('reveal');
+      var kids = [];
+      var grids = section.querySelectorAll('.grid, .card-grid, .collection-grid');
+      var done = false;
+      grids.forEach(function (grid) {
+        if (grid.children.length < 3) return;
+        Array.prototype.forEach.call(grid.children, function (kid, i) {
+          kid.classList.add('reveal');
+          kid.style.setProperty('--reveal-delay', Math.min(i, 8) * 80 + 'ms');
+          kids.push(kid);
+        });
+        done = true;
+      });
+      if (!done) {
+        var cards = section.querySelectorAll('.card-wrapper');
+        if (cards.length >= 3) {
+          Array.prototype.forEach.call(cards, function (card, i) {
+            card.classList.add('reveal');
+            card.style.setProperty('--reveal-delay', Math.min(i, 8) * 80 + 'ms');
+            kids.push(card);
+          });
+        }
+      }
+      groups.push({ section: section, kids: kids });
+    });
+    if (!groups.length) {
+      root.classList.remove('js-reveal');
+      return;
+    }
+
+    var show = function (group) {
+      group.section.classList.add('is-visible');
+      group.kids.forEach(function (kid) { kid.classList.add('is-visible'); });
+    };
+
+    if (!('IntersectionObserver' in window)) {
+      groups.forEach(show);
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var group = groups.find(function (g) { return g.section === entry.target; });
+        if (group) show(group);
+        io.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0 });
+    groups.forEach(function (group) { io.observe(group.section); });
+
+    /* Safety net: reveal anything already in (or above) the viewport
+       3s after load, so content can never sit hidden on screen. */
+    setTimeout(function () {
+      var vh = window.innerHeight || 0;
+      groups.forEach(function (group) {
+        var rect = group.section.getBoundingClientRect();
+        if (rect.top < vh && rect.bottom > 0) show(group);
+      });
+    }, 3000);
+  })();
+</script>
