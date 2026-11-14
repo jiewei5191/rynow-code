@@ -50,3 +50,13 @@
   - `layout/theme.liquid` — `{{ 'lenis.css' | asset_url | stylesheet_tag }}` added in `<head>` right after the `stylesheets` render; `{% render 'lenis' %}` added just before `</body>`. Nothing else changed (7,102 → 7,178 chars / 7,186 bytes).
 - `assets/base.css` NOT touched (A2-hero CSS stays as-is). MAIN theme 189966123075 NOT touched.
 - Verification: all three files upserted + re-read from the draft, exact-match PASS (2026-11-14). Scroll feel NOT yet verified in a browser — parent to check on the preview link; mobile check by owner.
+
+## GSAP ScrollTrigger homepage reveals (added 2026-11-14, draft only)
+- **GSAP 3.12.5 core + ScrollTrigger 3.12.5** (free) via jsDelivr CDN, pinned, `defer`: `https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js` and `.../dist/ScrollTrigger.min.js`.
+- Files added in draft 190045716547 (same draft as A2 hero + Lenis — no new draft created):
+  - `snippets/gsap-reveal.liquid` (2,062 chars / 2,064 bytes) — script tags + init on window load.
+  - `layout/theme.liquid` — `{% if template.name == 'index' %}{% render 'gsap-reveal' %}{% endif %}` added just before `</body>`, after `{% render 'lenis' %}`. Nothing else changed (7,178 → 7,253 chars / 7,261 bytes).
+- Behaviour: every homepage section EXCEPT the first (A2 hero, which already animates) fades + rises (y:24 → 0, opacity 0 → 1, 0.7s, power3.out), trigger `top 88%`, once only. Card grids inside a section (`.grid` / `.card-grid` / `.collection-grid` with ≥3 children, else `.card-wrapper` ≥3) stagger 0.08. Section order in `templates/index.json`: A2 hero (skipped) → AD600Pro II spotlight → categories → Creator Deals grid → deals block → New In → A2 video banner → Lux → trust → guides → brands.
+- Safety: no content is ever hidden unless GSAP + ScrollTrigger actually loaded; CDN failure or `prefers-reduced-motion` leaves the page fully visible (no CSS hiding — initial state set via `gsap.from` only when GSAP is present). Deliberately NOT wired to Lenis (no ticker sync); ScrollTrigger reads native scroll positions while Lenis runs its own autoRaf loop.
+- `assets/lenis.css` / `snippets/lenis.liquid` NOT touched. MAIN theme 189966123075 NOT touched.
+- Verification: both files upserted + re-read from the draft, exact-match PASS (2026-11-14). Animation look/feel NOT yet verified in a browser — parent to check on the preview link; mobile check by owner.

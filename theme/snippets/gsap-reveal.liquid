@@ -1,0 +1,59 @@
+{% comment %}
+  GSAP ScrollTrigger homepage reveals (GSAP 3.12.5, free).
+  Fade + small rise for homepage sections below the hero, once only.
+  Safety: content is never hidden unless GSAP actually loaded; a CDN
+  failure or prefers-reduced-motion leaves the page fully visible.
+  Deliberately NOT wired to Lenis — ScrollTrigger reads native scroll.
+{% endcomment %}
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script>
+  window.addEventListener('load', function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+    gsap.registerPlugin(ScrollTrigger);
+
+    var sections = document.querySelectorAll('#MainContent > .shopify-section');
+    if (!sections.length) return;
+
+    var reveal = function (targets, trigger) {
+      gsap.from(targets, {
+        y: 24,
+        opacity: 0,
+        duration: 0.7,
+        ease: 'power3.out',
+        stagger: 0.08,
+        scrollTrigger: {
+          trigger: trigger,
+          start: 'top 88%',
+          once: true,
+          toggleActions: 'play none none none'
+        }
+      });
+    };
+
+    sections.forEach(function (section, index) {
+      if (index === 0) return; /* hero already animates */
+
+      /* Card grids inside the section stagger; the section itself still reveals. */
+      var grids = section.querySelectorAll('.grid, .card-grid, .collection-grid');
+      var animatedGrids = 0;
+      grids.forEach(function (grid) {
+        var kids = grid.children;
+        if (kids.length < 3) return;
+        reveal(kids, grid);
+        animatedGrids++;
+      });
+
+      /* Product cards not wrapped in a .grid container. */
+      if (!animatedGrids) {
+        var cards = section.querySelectorAll('.card-wrapper');
+        if (cards.length >= 3) {
+          reveal(cards, section);
+        }
+      }
+
+      reveal(section, section);
+    });
+  });
+</script>
