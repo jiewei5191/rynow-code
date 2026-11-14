@@ -1,0 +1,191 @@
+{% stylesheet %}
+  .rynow-compare-a2 {
+    padding: 72px 0 88px;
+    background: #ffffff;
+    color: #1d1d1f;
+    text-align: center;
+  }
+
+  .rynow-compare-a2__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .rynow-compare-a2__eyebrow {
+    margin: 0 0 16px;
+    color: #c9a86a;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+  }
+
+  .rynow-compare-a2__heading {
+    margin: 0 0 16px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(32px, 3.4vw, 44px);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .rynow-compare-a2__sub {
+    max-width: 52ch;
+    margin: 0 auto 40px;
+    color: #6e6e73;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .rynow-compare-a2__slider-wrap {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
+  }
+
+  .rynow-compare-a2__slider {
+    --divider-width: 2px;
+    --divider-color: #ffffff;
+    --divider-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+    --default-handle-width: 46px;
+    --default-handle-color: #ffffff;
+    --default-handle-opacity: 1;
+    --default-handle-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    display: block;
+    width: 100%;
+  }
+
+  .rynow-compare-a2__slider img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .rynow-compare-a2__label {
+    position: absolute;
+    top: 16px;
+    z-index: 2;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.55);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    pointer-events: none;
+  }
+
+  .rynow-compare-a2__label--before {
+    left: 16px;
+  }
+
+  .rynow-compare-a2__label--after {
+    right: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .rynow-compare-a2 {
+      padding: 56px 0 72px;
+    }
+
+    .rynow-compare-a2__sub {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+  }
+{% endstylesheet %}
+
+{% liquid
+  assign before_image = section.settings.before_image | image_url: width: 980
+  if before_image == blank
+    assign before_image = 'https://cdn.shopify.com/s/files/1/0693/9230/2147/files/a2-compare-beach-before.jpg?v=1794653158'
+  endif
+  assign after_image = section.settings.after_image | image_url: width: 980
+  if after_image == blank
+    assign after_image = 'https://cdn.shopify.com/s/files/1/0693/9230/2147/files/a2-compare-beach-after.jpg?v=1794653165'
+  endif
+%}
+
+{% if product.handle == 'godox-a2-smartphone-xenon-flash-ttl-hss-1-8000s-magnetic-flash-with-bi-color-led-light' %}
+  <section class="rynow-compare-a2">
+    <div class="rynow-compare-a2__inner">
+      <p class="rynow-compare-a2__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="rynow-compare-a2__heading">{{ section.settings.heading }}</h2>
+      <p class="rynow-compare-a2__sub">{{ section.settings.subheading }}</p>
+      <div class="rynow-compare-a2__slider-wrap">
+        <img-comparison-slider value="50" class="rynow-compare-a2__slider">
+          <img
+            slot="first"
+            src="{{ before_image }}"
+            alt="Beach portrait at sunset, phone only — no flash"
+            width="490"
+            height="650"
+            loading="lazy"
+            decoding="async"
+          >
+          <img
+            slot="second"
+            src="{{ after_image }}"
+            alt="Beach portrait at sunset, with the Godox A2 xenon flash"
+            width="490"
+            height="650"
+            loading="lazy"
+            decoding="async"
+          >
+        </img-comparison-slider>
+        <span class="rynow-compare-a2__label rynow-compare-a2__label--before">Without flash</span>
+        <span class="rynow-compare-a2__label rynow-compare-a2__label--after">A2 flash</span>
+      </div>
+    </div>
+  </section>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8.0.7/dist/styles.css"
+  >
+  <script src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8.0.7/dist/index.js" defer></script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "A2 compare slider",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "before_image",
+      "label": "Before image (without flash)"
+    },
+    {
+      "type": "image_picker",
+      "id": "after_image",
+      "label": "After image (A2 flash)"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Godox A2"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "See the difference."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Same scene. Left: phone only. Right: with the A2 xenon flash. Drag the handle."
+    }
+  ],
+  "presets": [
+    {
+      "name": "A2 compare slider"
+    }
+  ]
+}
+{% endschema %}
